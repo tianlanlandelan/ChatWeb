@@ -40,7 +40,8 @@
 	import {testData} from "../data.js"
 	export default {
 		props:{
-			
+			// 窗口高度，窗口高度可能发生变化，需要在监听window.onresize事件的页面中传入动态变化的窗口高度
+			height:0
 		},
 		components:{Dialogue,testData},
 		data () {
@@ -48,14 +49,9 @@
 				  messages:testData.messages,
 				  portrait:testData.portrait,
 				  title:"犊子",
-				  height:window.innerHeight,
 				  isMe:false
 				}
 		},mounted(){
-			window.onresize = () => {
-				this.height = window.innerHeight;
-				console.log(this.innerHeight);
-			};
 			
 		}
 		

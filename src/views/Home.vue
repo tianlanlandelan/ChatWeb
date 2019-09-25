@@ -16,7 +16,7 @@
 		</el-col>
 		<!-- 右侧内容 -->
 		<el-col :span="17" class = "right-content">
-			<Chat></Chat>
+			<Chat :height="height"></Chat>
 		</el-col>
 	</el-row>
 
@@ -115,9 +115,7 @@
 		margin: 10px;
 	}
 	.left-bar{
-		border-right: 1px solid #DCDFE6;
-		height: 100%;
-		background-color: #475669;
+		background-color: #141414;
 		max-width: 60px;
 	}
 	
