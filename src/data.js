@@ -1,0 +1,55 @@
+let img = "http://localhost:8080/static/img/icon.png";
+const testData={
+	portrait:img
+	,
+	//MessageList组件展示的消息列表数据
+	messageList:[
+		{
+			id:1,
+			portrait:img,
+			title:"微信团队",
+			text:"[链接]登录操作通知",
+			dateTime:"08:14",
+			number:1
+		},{
+			id:2,
+			portrait:img,
+			title:"往后余生",
+			text:"[图片]",
+			dateTime:"08:29",
+			number:0
+		},{
+			id:3,
+			portrait:img,
+			title:"龙锦苑东四",
+			text:"东四-凯:想找个月嫂",
+			dateTime:"08:14",
+			number:12
+		},{
+			id:4,
+			portrait:img,
+			title:"Chat作者群",
+			text:"[20条]我不叫大脸猫",
+			dateTime:"08:14",
+			number:89
+		},{
+			id:5,
+			portrait:img,
+			title:"犊子",
+			text:"王金瑞:你看看",
+			dateTime:"09/23",
+			number:100
+		},
+	]
+	,
+	messages:[
+		{id:1,message:"应该难度不大吧？哦对了，有一个leaderboard需要用到动画animation来实现对比上一次答题本次答题的排位变化这个可做吗？"},
+		{id:2,message:"好，那我这边商议一下具体内容。主要现在我这边需要把学习内容敲定下来，我到时也发过来看一下。"},
+		{id:3,message:"这个没问题。"},
+		{id:4,message:"我这边也尽快给您回复"}
+	]
+}
+
+export {
+	testData
+}
