@@ -41,11 +41,9 @@
 
 <style>
 	.row{
-		border-width: 1px;
-		border-style: solid;
-		border-color: #DCDFE6;
+		border-bottom: 1px solid #d7d6d6;
 		padding:10px;
-		background-color: #EBEEF5;
+		background-color: #F3F3F3;
 		min-width:300px;
 	}
 	.left{

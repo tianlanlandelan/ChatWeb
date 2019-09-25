@@ -1,36 +1,33 @@
 <!--对话-->
 <template>
 	<div>
-		<el-row class="his-row">
-			<el-col class="icon" :span = "4">
+		<el-row class="his-row" v-if="!isMe">
+			<el-col class="icon" :span = "2">
 				<img :src = "portrait">
 			</el-col>
 			<el-col class="content" :span = "20">
 				<div class="title">
 					{{title}}
 				</div>
-				<div class="text"  v-if="content.length > 30">
+				<div class="text"  v-if="content.length > 50">
 					{{content}}
 				</div>
-				<span class="text" v-if="content.length <= 30">
+				<span class="text" v-if="content.length <= 50">
 					{{content}}
 				</span>
 			</el-col>
 		</el-row>
-		<el-row class="my-row">
-			<el-col class="icon" :span = "4">
-				<img :src = "portrait">
-			</el-col>
-			<el-col class="content" :span = "20">
-				<div class="title">
-					{{title}}
-				</div>
-				<div class="text"  v-if="content.length > 30">
+		<el-row class="my-row" v-if="isMe">
+			<el-col class="content" :span = "20" :offset="2">
+				<div class="text"  v-if="content.length > 50">
 					{{content}}
 				</div>
-				<span class="text" v-if="content.length <= 30">
+				<span class="text" v-if="content.length <= 50">
 					{{content}}
 				</span>
+			</el-col>
+			<el-col class="icon" :span = "2">
+				<img :src = "portrait">
 			</el-col>
 		</el-row>
 	</div>
@@ -41,7 +38,8 @@
 		props:{
 			portrait:"",
 			title:"",
-			content:""
+			content:"",
+			isMe:false
 		},
 		components:{},
 		data(){
@@ -55,17 +53,17 @@
 </script>
 
 <style>
-	.his-row{
-		padding: 10px 20px;
+	.his-row,.my-row{
+		padding:10px 20px;
 	}
 	img{
 		width: 40px;
 	}
-	.icon{
-		max-width: 40px;
+	.his-row .icon{
+		
 	}
 	.his-row .content{
-		padding: 0 10px;
+		
 	}
 	.his-row .title{
 		font-size: 0.8rem;
@@ -75,8 +73,27 @@
 	.his-row .text{
 		font-size: 1rem;
 		color: #303133;
-		background-color: #F2F6FC;
-		padding: 5px;
+		background-color: #fefefe;
+		padding: 10px;
 		border-radius: 5px;
+	}
+	.my-row .content{
+		text-align: right;
+		margin-top: 1rem;
+	}
+	.my-row .text{
+		text-align: left;
+		font-size: 1rem;
+		color: #303133;
+		background-color: #9de759;
+		padding: 10px;
+		border-radius: 5px;
+		
+	}
+	.my-row .icon{
+		text-align: right;
+	}
+	.my-row{
+		
 	}
 </style>

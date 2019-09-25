@@ -17,7 +17,14 @@
 				style="height: 100%;"
 				wrapStyle="overflow-x: hidden;"
 				>
-			    <Dialogue :portrait="portrait" :title="title" :content="message.message" v-for="message in messages" :key="message.id"></Dialogue>
+			    <Dialogue 
+					:portrait="portrait" 
+					:title="title" 
+					:content="message.message" 
+					:isMe="message.from == 1002"
+					v-for="message in messages" 
+					:key="message.id">
+				</Dialogue>
 			</el-scrollbar>
 		</el-row>
 		<!--内容编辑区-->
@@ -41,7 +48,8 @@
 				  messages:testData.messages,
 				  portrait:testData.portrait,
 				  title:"犊子",
-				  height:window.innerHeight
+				  height:window.innerHeight,
+				  isMe:false
 				}
 		},mounted(){
 			window.onresize = () => {
@@ -56,10 +64,9 @@
 
 <style>
 	.bg{
-		border-width: 1px;
-		border-style: solid;
-		border-color: #DCDFE6;
-		background-color: #EBEEF5;
+		border-bottom: 1px solid #d7d6d6;
+		border-left: 1px solid #d7d6d6;
+		background-color: #F3F3F3;
 	}
 	.title-row{
 		padding:10px;
