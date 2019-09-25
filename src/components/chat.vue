@@ -12,11 +12,18 @@
 		</el-row>
 		<!--聊天内容界面-->
 		<el-row class="show-row bg" :style="{height:(height - 120) * 0.6 + 'px'}">
-			<Dialogue :portrait="portrait" :title="title" :content="message.message" v-for="message in messages" :key="message.id"></Dialogue>
+			<!-- 注意需要给 el-scrollbar 设置高度，判断是否滚动是看它的height判断的 -->
+			<el-scrollbar 
+				style="height: 100%;"
+				wrapStyle="overflow-x: hidden;"
+				>
+			    <Dialogue :portrait="portrait" :title="title" :content="message.message" v-for="message in messages" :key="message.id"></Dialogue>
+			</el-scrollbar>
 		</el-row>
 		<!--内容编辑区-->
 		<el-row class="edit-row bg" :style="{height:(height - 120) * 0.4 + 'px'}">
 			11
+			
 		</el-row>
 	</div>
 </template>
@@ -71,6 +78,7 @@
 	.show-row{
 		
 	}
+	
 	.edit-row{
 		
 	}

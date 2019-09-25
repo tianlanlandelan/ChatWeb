@@ -43,10 +43,41 @@ const testData={
 	]
 	,
 	messages:[
-		{id:1,message:"应该难度不大吧？哦对了，有一个leaderboard需要用到动画animation来实现对比上一次答题本次答题的排位变化这个可做吗？"},
-		{id:2,message:"好，那我这边商议一下具体内容。主要现在我这边需要把学习内容敲定下来，我到时也发过来看一下。"},
-		{id:3,message:"这个没问题。"},
-		{id:4,message:"我这边也尽快给您回复"}
+		{
+			id:1,
+			from:1001,
+			to:1002,
+			messageId:"ABC",
+			message:"应该难度不大吧？哦对了，有一个leaderboard需要用到动画animation来实现对比上一次答题本次答题的排位变化这个可做吗？"
+		},
+		{
+			id:2,
+			from:1002,
+			to:1001,
+			messageId:"ABC",
+			message:"难度不大可以做。animation我用过，问题不大。"
+		},
+		{
+			id:3,
+			from:1001,
+			to:1002,
+			messageId:"ABC",
+			message:"好，那我这边商议一下具体内容。主要现在我这边需要把学习内容敲定下来，我到时也发过来看一下。"
+		},
+		{
+			id:4,
+			from:1002,
+			to:1001,
+			messageId:"ABC",
+			message:"可以，文档我这两天写一下给您，包含：系统设计图、流程图、接口文档，效果图的话可能会慢一点"
+		},
+		{
+			id:5,
+			from:1001,
+			to:1002,
+			messageId:"ABC",
+			message:"这个没问题。"
+		}
 	]
 }
 
