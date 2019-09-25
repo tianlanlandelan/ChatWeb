@@ -11,7 +11,7 @@
 			</el-col>
 		</el-row>
 		<!--聊天内容界面-->
-		<el-row class="show-row bg" :style="{height:(height - 120) * 0.6 + 'px'}">
+		<el-row class="show-row bg" :style="{height:(height - 60) * 0.6 + 'px'}">
 			<!-- 注意需要给 el-scrollbar 设置高度，判断是否滚动是看它的height判断的 -->
 			<el-scrollbar 
 				style="height: 100%;"
@@ -21,7 +21,7 @@
 			</el-scrollbar>
 		</el-row>
 		<!--内容编辑区-->
-		<el-row class="edit-row bg" :style="{height:(height - 120) * 0.4 + 'px'}">
+		<el-row class="edit-row bg" :style="{height:(height - 60) * 0.4 + 'px'}">
 			11
 			
 		</el-row>
