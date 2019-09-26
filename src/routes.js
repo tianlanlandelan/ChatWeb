@@ -4,6 +4,7 @@ import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Index from './views/Index.vue'
+import Password from "./views/Password.vue"
 
 let routes = [
 	{
@@ -24,6 +25,12 @@ let routes = [
         name: 'Register',
         hidden: true
     },
+	{
+	    path: '/Password',
+	    component: Password,
+	    name: 'Password',
+	    hidden: true
+	},
     {
         path: '/404',
         component: NotFound,

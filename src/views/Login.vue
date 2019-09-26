@@ -21,13 +21,13 @@
 	  <!-- 忘记密码和新用户注册按钮 -->
 	  <el-form-item class="center">
 	    <el-col :span="8">
-	      <el-button type="text" @click="showRegister">忘记密码？</el-button>
+	      <el-button type="text" @click="toPassword()">忘记密码？</el-button>
 	    </el-col>
 	    <el-col :span="8">
-	      <el-button type="text" @click="showRegister">新用户注册</el-button>
+	      <el-button type="text" @click="toRegister()">新用户注册</el-button>
 	    </el-col>
 	  		<el-col :span="8">
-	  		  <el-button type="text" @click="showRegister">验证码登录</el-button>
+	  		  <el-button type="text" @click="toIndex()">验证码登录</el-button>
 	  		</el-col>
 	  </el-form-item>
     </el-form>
@@ -91,11 +91,15 @@
           }
         });
       },
-      showRegister(){
-        console.log('showRegister');
+      toRegister(){
         this.$router.push('/Register');
-        console.log('RouterList',this.$router);
-      }
+      },
+	  toIndex(){
+		  this.$router.push('/Index');
+	  },
+	  toPassword(){
+		  this.$router.push('/Password');
+	  }
     }
   }
 
