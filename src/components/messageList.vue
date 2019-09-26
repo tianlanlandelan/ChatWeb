@@ -52,9 +52,7 @@
 	.middle{
 		padding-left: 10px;
 	}
-	.right{
-		text-align: right;
-	}
+	
 	.portrait{
 		width: 40px;
 		border-radius: 20px;

@@ -3,35 +3,42 @@ import Register from './views/Register.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
 import Main from './views/Main.vue'
+import Index from './views/Index.vue'
 
 let routes = [
+	{
+	    path: '/Index',
+	    component: Index,
+	    name: 'Index',
+	    hidden: true
+	},
     {
         path: '/Logon',
         component: Logon,
-        name: '',
+        name: 'Logon',
         hidden: true
     },
     {
         path: '/Register',
         component: Register,
-        name: '',
+        name: 'Register',
         hidden: true
     },
     {
         path: '/404',
         component: NotFound,
-        name: '',
+        name: '404',
         hidden: true
     },
     {
         path: '/Home',
         component: Home,
-        name: ''
+        name: 'Home'
     },
     {
         path: '*',
         hidden: true,
-        redirect: { path: '/Logon' }
+        redirect: { path: '/Index' }
     }
 ];
 

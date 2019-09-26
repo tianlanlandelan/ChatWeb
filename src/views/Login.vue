@@ -1,29 +1,32 @@
 <template>
   <el-row>
     <!-- 登录界面-->
-    <el-form :model="logonUser" :rules="logonRules" ref="logonUser" label-position="left" label-width="0px" class="demo-ruleForm login-container">
-      <h3 class="title">系统登录</h3>
-      <!-- 用户名输入框 -->
-      <el-form-item prop="username">
-        <el-input type="text" v-model="logonUser.username" auto-complete="off" placeholder="用户名、手机号、邮箱"></el-input>
-      </el-form-item>
-      <!-- 密码输入框 -->
-      <el-form-item prop="password">
-        <el-input type="password" v-model="logonUser.password" auto-complete="off" placeholder="密码"></el-input>
-      </el-form-item>
-      <!-- 忘记密码和新用户注册按钮 -->
-      <el-form-item>
-        <el-col :span="12">
-          <el-button type="text" @click="showRegister">忘记密码？</el-button>
-        </el-col>
-        <el-col :span="12">
-          <el-button type="text" @click="showRegister">新用户注册</el-button>
-        </el-col>
-      </el-form-item>
-      <!-- 登录按钮 -->
-      <el-form-item style="width:100%;">
-        <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogon" :loading="logining">登录</el-button>
-      </el-form-item>
+    <el-form :model="logonUser" 
+		:rules="logonRules" ref="logonUser" 
+		label-position="left" label-width="0px" 
+		class="demo-ruleForm login-container">
+      <h3 class="title">账号密码登录</h3>
+	  <!-- 用户名输入框 -->
+	  <el-form-item prop="username">
+	    <el-input type="text" v-model="logonUser.username" auto-complete="off" placeholder="用户名、手机号、邮箱"></el-input>
+	  </el-form-item>
+	  <!-- 密码输入框 -->
+	  <el-form-item prop="password">
+	    <el-input type="password" v-model="logonUser.password" auto-complete="off" placeholder="密码"></el-input>
+	  </el-form-item>
+	  <!-- 忘记密码和新用户注册按钮 -->
+	  <el-form-item>
+	    <el-col :span="12">
+	      <el-button type="text" @click="showRegister">忘记密码？</el-button>
+	    </el-col>
+	    <el-col :span="12">
+	      <el-button type="text" @click="showRegister">新用户注册</el-button>
+	    </el-col>
+	  </el-form-item>
+	  <!-- 登录按钮 -->
+	  <el-form-item style="width:100%;">
+	    <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogon" :loading="logining">登录</el-button>
+	  </el-form-item>
     </el-form>
   </el-row>
 </template>
@@ -33,6 +36,7 @@
   export default {
     data() {
       return {
+		useCode:true,
         //登录用户数据
         logonUser: {
           username: '',
