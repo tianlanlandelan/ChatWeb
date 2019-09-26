@@ -29,8 +29,12 @@
 		</el-row>
 		<!--内容编辑区-->
 		<el-row class="edit-row bg" :style="{height:(height - 60) * 0.4 + 'px'}">
-			11
-			
+			<el-row class="tool">
+				
+			</el-row>
+			<el-row class="input-row" :style="{height:(height - 60) * 0.4 - 40 + 'px'}">
+				<textarea class="input" id="text" autofocus></textarea>
+			</el-row>
 		</el-row>
 	</div>
 </template>
@@ -52,6 +56,19 @@
 				  isMe:false
 				}
 		},mounted(){
+			// 监听键盘按下事件，回车键发送消息
+			let _this = this;
+			var text = document.getElementById('text'); 
+			text.onkeydown = function(e) { 
+			  if(e.keyCode == 13) { 
+				_this.$message({
+				  message: text.value,
+				  type: 'success'
+				}); 
+			  } 
+			} 
+		},
+		methods:{
 			
 		}
 		
@@ -84,5 +101,19 @@
 	
 	.edit-row{
 		
+	}
+	.tool{
+		height: 40px;
+		border-bottom: 1px solid #d7d6d6;
+	}
+	.input-row{
+		padding: 20px;
+	}
+	.input{
+		width: 100%;
+		height: 100%;
+		border: none;
+		background-color: #F3F3F3;
+		resize:none ;
 	}
 </style>

@@ -11,8 +11,12 @@
 		</el-col>
 
 		<!--中间列表-->
-		<el-col :span="6" class="middle-list">
-			<MessageList></MessageList>
+		<el-col :span="6" class="middle-list" :style="{height:height  + 'px'}">
+			<el-scrollbar 
+				style="height: 100%;"
+				wrapStyle="overflow-x: hidden;">
+				<MessageList></MessageList>
+			</el-scrollbar>
 		</el-col>
 		<!-- 右侧内容 -->
 		<el-col :span="17" class = "right-content">
@@ -120,7 +124,7 @@
 	}
 	
 	.middle-list{
-		
+		background-color: #fefefe;
 	}
 
 	.right-content{
