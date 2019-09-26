@@ -119,7 +119,7 @@
 		this.$router.push('/Home');
       },
 	  toLogin(){
-		  
+		  this.$router.push('/Login');
 	  }
     }
   }

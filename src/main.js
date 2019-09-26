@@ -22,11 +22,11 @@ const router = new VueRouter({
 
 //过滤路由，只有登录和注册页面允许未登录状态下访问
 // router.beforeEach((to, from, next) => {
-//   if (to.path == '/Logon' || to.path == '/Register' || to.path == '/Register') {
+//   if (to.path == '/Login' || to.path == '/Register' || to.path == '/Register') {
 //     sessionStorage.removeItem('user');
 //   }
 //   let user = JSON.parse(sessionStorage.getItem('user'));
-//   if (!user && to.path != '/Logon' && to.path != '/Register' && to.path != '/Index') {
+//   if (!user && to.path != '/Login' && to.path != '/Register' && to.path != '/Index') {
 //     next({ path: '/Index' })
 //   } else {
 //     next()

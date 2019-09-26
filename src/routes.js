@@ -1,4 +1,4 @@
-import Logon from './views/Login.vue'
+import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import NotFound from './views/404.vue'
 import Home from './views/Home.vue'
@@ -13,9 +13,9 @@ let routes = [
 	    hidden: true
 	},
     {
-        path: '/Logon',
-        component: Logon,
-        name: 'Logon',
+        path: '/Login',
+        component: Login,
+        name: 'Login',
         hidden: true
     },
     {

@@ -14,18 +14,21 @@
 	  <el-form-item prop="password">
 	    <el-input type="password" v-model="logonUser.password" auto-complete="off" placeholder="密码"></el-input>
 	  </el-form-item>
-	  <!-- 忘记密码和新用户注册按钮 -->
-	  <el-form-item>
-	    <el-col :span="12">
-	      <el-button type="text" @click="showRegister">忘记密码？</el-button>
-	    </el-col>
-	    <el-col :span="12">
-	      <el-button type="text" @click="showRegister">新用户注册</el-button>
-	    </el-col>
-	  </el-form-item>
 	  <!-- 登录按钮 -->
 	  <el-form-item style="width:100%;">
 	    <el-button type="primary" style="width:100%;" @click.native.prevent="handleLogon" :loading="logining">登录</el-button>
+	  </el-form-item>
+	  <!-- 忘记密码和新用户注册按钮 -->
+	  <el-form-item class="center">
+	    <el-col :span="8">
+	      <el-button type="text" @click="showRegister">忘记密码？</el-button>
+	    </el-col>
+	    <el-col :span="8">
+	      <el-button type="text" @click="showRegister">新用户注册</el-button>
+	    </el-col>
+	  		<el-col :span="8">
+	  		  <el-button type="text" @click="showRegister">验证码登录</el-button>
+	  		</el-col>
 	  </el-form-item>
     </el-form>
   </el-row>
